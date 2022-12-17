@@ -58,10 +58,10 @@
                         <form action="{{route('customer-login')}}" method="post">
                             {{ csrf_field() }}
                             <div class="form-group">
-                                <input type="email" name="email_address" class="form-control " placeholder="example@gmail.com">
+                                <input type="email" name="email_address" value="customer@customer.com" class="form-control " placeholder="example@gmail.com">
                             </div>
                             <div class="form-group">
-                                <input type="password" name="password" class="form-control " placeholder="Password">
+                                <input type="password" name="password" value="password" class="form-control " placeholder="Password">
                             </div>
 
                             <div class="form-group">
@@ -81,7 +81,7 @@
         email_address.onblur = function(){
             var xmlHttp = new XMLHttpRequest();
             var email = document.getElementById('email_address').value;
-            var serverPage = 'http://127.0.0.1:8000//ajax-email-check/'+email;
+            var serverPage = 'https://newshop.baratahmed.com/ajax-email-check/'+email;
             xmlHttp.open("GET",serverPage);
             xmlHttp.onreadystatechange = function(){
                 //alert(xmlHttp.readyState);

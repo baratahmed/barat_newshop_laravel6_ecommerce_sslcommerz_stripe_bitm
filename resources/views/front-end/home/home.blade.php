@@ -102,10 +102,10 @@ HOME
                                 <figure>
                                     <a href="{{route('product-details',['id'=>$newProduct->id,'name'=>$newProduct->product_name])}}" class="new-gri">
                                         <div class="grid-img">
-                                            <img  src="{{asset($newProduct->product_image)}}" class="img-responsive" alt="">
+                                            <img src="{{asset($newProduct->product_image)}}" width="200px" height="200px" alt="">
                                         </div>
                                         <div class="grid-img">
-                                            <img  src="{{$newProduct->product_image}}" class="img-responsive"  alt="">
+                                            <img src="{{$newProduct->product_image}}" width="200px" height="200px" alt="">
                                         </div>
                                     </a>
                                 </figure>
