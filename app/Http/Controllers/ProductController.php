@@ -63,8 +63,8 @@ class ProductController extends Controller
         //$imageName = $productImage->getClientOriginalName();
         $directory = 'product-images/';
         $imageUrl = $directory.$imageName;
-        //$productImage->move($directory,$imageName);
-        Image::make($productImage)->resize(200,200)->save($imageUrl);
+        $productImage->move($directory,$imageName);
+        // Image::make($productImage)->resize(200,200)->save($imageUrl);
 
         return $imageUrl;
     }
