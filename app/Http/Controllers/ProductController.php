@@ -192,7 +192,7 @@ class ProductController extends Controller
     {
         $product = Product::find($id);
         $product->delete();
-        unlink($product->product_image);
+        unlink(asset($product->product_image));
         Session::flash('success','Product deleted successfully!');
         return redirect()->route('manage-product');
     }
